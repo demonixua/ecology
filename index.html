@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/files/css2.css" rel="stylesheet">
+    <style>body {
+  margin: 0;
+  padding: 0;
+  min-width: 1380px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  color: #333333;
+  counter-reset: section-counter;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.container {
+  width: 1340px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.page {
+  display: grid;
+  grid-template-rows:
+    auto
+    1fr
+    auto;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  min-height: 100vh;
+}
+
+.page-header {
+  grid-area: header;
+  background-color: #f2f8fb;
+}
+
+.page-content {
+  grid-area: content;
+}
+
+
+
+.page-link {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  color: #06a9b3;
+}
+
+.site-nav a:hover{
+  opacity: 0.5;
+}
+.button {
+  display: inline-block;
+  padding: 16px 32px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #06a9b3;
+  text-decoration: none;
+  border: none;
+}
+
+.page-content h1 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 62px;
+  color: #333333;
+}
+
+.section h2 {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 115px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #06a9a3;
+}
+
+.section h2::before {
+  counter-increment: section-counter;     /* Инкрементирует счетчик*/
+  content: "0" counter(section-counter);  /* Отображает текущее значение счетчика */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #06a9b3;
+}
+
+.section h2::after {
+  content: "";
+  position: absolute;
+  width: 81px;
+  height: 1px;
+  left: 25px;
+  top: 9px;
+  border-top: 1px solid #06a9b3;
+}
+
+.section h3 {
+  margin: 60px 0 25px 0;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.section-centered-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 13px;
+}
+
+.page-nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  grid-column-gap: 65px;
+}
+
+.logo-container {
+  padding: 20px 200px 10px 0;
+  text-align: center;
+}
+
+.search-container {
+  padding: 25px 0 23px;
+}
+
+.search {
+  display: block;
+  width: 16px;
+  height: 16px;
+  padding: 7px 0;
+  background-image: url("https://assets.htmlacademy.ru/content/skills/6/case-02/img/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+.user-nav {
+  padding: 25px 0 23px;
+}
+
+.site-nav {
+  padding-left: 60px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-nav-item {
+  padding-right: 35px;
+}
+
+.site-nav-item:last-child {
+  padding-right: 0;
+}
+
+.welcome {
+  padding-bottom: 100px;
+  background-color: #f2f8fb;
+}
+
+.welcome-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-column-gap: 24px;
+}
+
+.welcome-city {
+  grid-area: 1 / 2 / 2 / 8;
+  margin: 80px 0 10px 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #aaaaaa;
+}
+
+.welcome h1 {
+  grid-area: 2 / 2 / 3 / 8;
+  z-index: 1;
+}
+
+.welcome-text {
+  grid-area: 3 / 2 / 4 / 8;
+  z-index: 1;
+  margin: 10px 0 40px 0;
+  
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  color: #333333;
+}
+
+.welcome-button {
+  grid-area: 4 / 2 / 5 / 4;
+}
+
+.welcome-img-container {
+  grid-area: 1 / 6 / -1 / -1;  
+}
+
+.welcome-img-container img {
+  display: block;
+  width: 100%;
+
+}
+
+.welcome-button:hover {
+  opacity: 0.8;
+}
+
+.social-media {
+  grid-area: 5 / 2 / 6 / 5;
+
+  padding: 0;
+  margin: 50px 0 0 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.social-media-item {
+  margin-right: 73px;
+}
+
+.social-media-item a:hover{
+  opacity: 0.8;
+}
+
+
+.social-media-item:last-child {
+  margin-right: 0;
+}
+
+.social-media-link {
+  display: block;
+  width: 104px;
+  height: 104px;
+}
+
+.social-media-link-wiki {
+  background-image: url("https://ru.wikipedia.org/static/images/project-logos/ruwiki.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90px;
+}
+
+
+
+.place {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+  margin-top: 100px;
+  margin-bottom: 95px;
+}
+
+.place::before {
+  content: "01";
+  position: absolute;
+  left: 145px;
+  top: 0;
+  font-weight: 900;
+  font-size: 65px;
+  line-height: 65px;
+  color: #eaf2f6;
+}
+
+.place::after {
+  content:"Опис";
+  position: absolute;
+  left: 145px;
+  top: 60px;
+  font-weight: 900;
+  font-size: 65px;
+  line-height: 65px;
+  color: #eaf2f6;
+  writing-mode: vertical-lr;
+  transform: scale(-1, -1) translateY(-40px);
+}
+
+.place header {
+  grid-column: 5 / 9;
+}
+
+.place-content {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+}
+
+.place-content > * {
+  grid-column: 5 / 9;
+}
+
+.place-content p {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.place-content img {
+  margin: 0 0 25px 0;
+}
+
+.place-content blockquote {
+  grid-column: 4 / 10;
+  margin: 0 0 35px 0;
+  padding-left: 30px;
+
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 40px;
+  border-left: 1px solid #06a9b3;
+}
+
+.big-pic {
+  grid-column: 2 / -2;
+}
+
+.place-button-container {
+  grid-column: 5 / 8;
+  margin-top: 10px;
+}
+
+.article-aside-right {
+  grid-column: -4 / -2;
+  
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.article-aside-left {
+  grid-column: 2 / 4;
+  margin-top: 20px;
+  
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.catalog {
+  padding: 0 0 140px 0;
+  
+  background-color: #f2f8fb;
+}
+
+.catalog-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.card-item {
+  grid-column: span 3;
+  border: 1px solid #c4c4c4;
+  
+  display: grid;
+  grid-template-columns: 3fr;
+  grid-template-rows:
+    220px
+    auto;
+  grid-gap: 17px 24px;
+  
+  background-color: #ffffff;
+}
+
+.card-horizontal {
+  grid-column: 3 / -3;
+  
+  grid-template-columns: 3fr 5fr;
+  grid-template-rows: auto;
+}
+
+.card-content {
+  padding: 0 24px 23px;
+}
+
+.card-horizontal .card-content {
+  padding: 20px 24px 24px 0;
+}
+
+.card-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content h3 {
+  margin: 0 0 5px 0;
+  
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 34px;
+  color: #0000c1;
+  text-decoration: none;
+}
+
+.card-content a{
+  text-decoration: none;
+}
+
+.card-content h3:hover{
+  color:#2222ff;
+  font-size: 23px;
+
+} 
+
+.card-content p {
+  margin: 0 0 17px 0;
+  
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #aaaaaa;
+}
+
+.card-content dl {
+  margin: 0;
+  padding: 15px 0 0 0;
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 50px;
+
+  border-top: 2px solid #eaf2f6;
+}
+
+.card-horizontal dl {
+  grid-column-gap: 175px;
+}
+
+.card-content dt {
+  margin: 0;
+  
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.card-content dd {
+  margin: 0;
+  
+  grid-row: 1 / 2;
+  
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+
+
+
+.titles {
+  grid-area: title;
+
+}
+
+.name {
+  grid-area: name;
+}
+
+.surname {
+  grid-area: surname;  
+}
+
+.email {
+  grid-area: email;  
+}
+
+.phone {
+  grid-area: phone;
+}
+
+.policy {
+  grid-area: policy;
+  margin-top: 25px;
+}
+
+.subscribe {
+  grid-area: subscribe;
+  margin-top: 15px;
+}
+
+.submit {
+  grid-area: submit;
+}
+
+
+.field {
+  width: 100%;
+  padding: 12px 16px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  border: 1px solid #cfdce3;
+  box-sizing: border-box;
+}
+
+.field::placeholder {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(51, 51, 51, 0.3);
+}
+
+.text-label {
+  max-width: 180px;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.checkbox label {
+  position: relative;
+  padding-left: 25px;
+}
+
+.checkbox label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  border: 1px solid #cfdce3;
+  left: 0;
+  top: 0;
+}
+
+.checkbox input:checked + label::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  background-color: #06a9b3;
+  left: 4px;
+  top: 4px;
+}
+
+.welcome-img-container img {
+  padding-top: 40px;
+}
+
+.logo-container a:hover {
+  opacity: 0.6;
+}
+.user-nav {
+    padding: 12px 1px 3px;
+}
+.user-nav p {
+    font-style: italic;
+}
+
+html {
+  scroll-behavior: smooth; /* свойство scroll-behavior не наследуется, применяется к прокручиваемым блокам */ 
+}
+/* 00000000000000000000000000000000000000*/
+/* 00000000000000000000000000000000000000*/
+/* 00000000000000000000000000000000000000*/
+/* 00000000000000000000000000000000000000*/
+/* 00000000000000000000000000000000000000*/
+/* 00000000000000000000000000000000000000*/
+body {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #292b2c;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* свойства модального окна по умолчанию */
+    .modal {
+      position: fixed;
+      /* фиксированное положение */
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      /* цвет фона */
+      z-index: 1050;
+      opacity: 0;
+      /* по умолчанию модальное окно прозрачно */
+      -webkit-transition: opacity 400ms ease-in;
+      -moz-transition: opacity 400ms ease-in;
+      transition: opacity 400ms ease-in;
+      /* анимация перехода */
+      pointer-events: none;
+      /* элемент невидим для событий мыши */
+    }
+
+    /* при отображении модального окно */
+    .modal:target {
+      opacity: 1;
+      pointer-events: auto;
+      overflow-y: auto;
+    }
+
+    /* ширина модального окна и его отступы от экрана */
+    .modal-dialog {
+      position: relative;
+      width: auto;
+      margin: 10px;
+    }
+
+    @media (min-width: 576px) {
+      .modal-dialog {
+        max-width: 500px;
+        margin: 30px auto;
+      }
+    }
+
+    /* свойства для блока, содержащего контент модального окна */
+    .modal-content {
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      background-color: #fff;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      border: 1px solid rgba(0, 0, 0, .2);
+      border-radius: .3rem;
+      outline: 0;
+    }
+
+    @media (min-width: 768px) {
+      .modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+      }
+    }
+
+    /* свойства для заголовка модального окна */
+    .modal-header {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 15px;
+      border-bottom: 1px solid #eceeef;
+    }
+
+    .modal-title {
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 1.5;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    /* свойства для кнопки "Закрыть" */
+    .close {
+      float: right;
+      font-family: sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+      color: #000;
+      text-shadow: 0 1px 0 #fff;
+      opacity: .5;
+      text-decoration: none;
+    }
+
+    /* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+    .close:focus,
+    .close:hover {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: .75;
+    }
+
+    /* свойства для блока, содержащего основное содержимое окна */
+    .modal-body {
+      position: relative;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      padding: 15px;
+      overflow: auto;
+    }
+
+
+/* 00000000000000000000000000000000000000*/
+/* 00000000000000000000000000000000000000*/
+/* 00000000000000000000000000000000000000*/
+/* 00000000000000000000000000000000000000*/
+/* 00000000000000000000000000000000000000*/
+
+
+
+
+
+
+
+
+</style>
+    <title>Вуглегірська ТЕС</title>
+
+  </head>
+  <body class="page">
+    <header class="page-header">
+      <nav class="page-nav container">
+        <ul class="site-nav">
+          <li class="site-nav-item">
+            <a class="site-nav-link page-link" href="#">Головна</a>
+          </li>
+          <li class="site-nav-item">
+            <a class="site-nav-link page-link" href="#calc">Калькулятори</a>
+          </li>
+          <li class="site-nav-item">
+            <a class="site-nav-link page-link" href="#openModal">Автори</a>
+          </li>
+          <li class="site-nav-item">
+            <a class="site-nav-link page-link" href="#openModal2">Викладач</a>
+          </li>
+
+        </ul>
+
+    <div id="openModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Автори</h3>
+            <a href="#close" title="Close" class="close">×</a>
+          </div>
+          <div class="modal-body">
+            Студенти группи ТМ-92 ТЕФ, <br>
+            Колос І.М та Підлісний Я.А
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+        <div id="openModal2" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Викладач</h3>
+            <a href="#close" title="Close" class="close">×</a>
+          </div>
+          <div class="modal-body">
+            Кафедра АПЕПС ТЕФ
+            КПІ ім. І. Сікорського  <br>
+            Бандурка Олена Іванівна
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+        <div class="logo-container">
+          <a class="logo" href="#">
+            <img src="files/logo.png" alt="Логотип" width="200" height="30">
+          </a>
+        </div>
+       
+        <div class="user-nav">
+          <p class="" href="#" style="size: 1px; opacity: 0.7;">ТЕФ, КПІ ім. І. Сікорського</p>
+        </div>
+      </nav>
+    </header>
+    <main class="page-content">
+      <div class="welcome" >
+        <div class="welcome-content container">
+          <h1>Вуглегірська ТЕС</h1>
+          <p class="welcome-city">Донецька область</p>
+          <p class="welcome-text">Найпотужніша електростанція Товариства <br>і перший за величиною енергогенеруючий <br> об'єкт на території Донецької області</p>
+          <div class="welcome-button">
+            <a class="button" href="#going">Коротко про об'єкт</a>
+
+          
+
+          </div>
+
+          
+           
+          <ul class="social-media">
+
+            <li class="social-media-item">
+              <a class="social-media-link social-media-link-wiki" href="https://uk.wikipedia.org/wiki/%D0%92%D1%83%D0%B3%D0%BB%D0%B5%D0%B3%D1%96%D1%80%D1%81%D1%8C%D0%BA%D0%B0_%D0%A2%D0%95%D0%A1" target="blank">
+                <span class="visually-hidden">Wikipedia</span>
+              </a>
+            </li>
+
+            <p style="font-weight: 100; opacity: 0.8; font-size: 18px;"> Посилання на ТЕС в Вікіпедії</p>
+
+          </ul>
+          <div class="welcome-img-container">
+            <img src="files/intro-welcome.jpg" alt="" width="795" height="496">
+          </div>
+        </div>
+      </div>
+      <article class="section place container" id="going">
+        <header>
+          <h2  >Історія / Характеристики</h2>
+          <h3>Короткий опис ТЕС</h3>
+        </header>
+        <div class="place-content">
+
+          <p>Вуглегірська теплова електростанція — найпотужніша електростанція Товариства і перший за величиною енергогенеруючий об'єкт на території Донецької області.
+           Окрім неї, на території області розташовані Старобешівська ТЕС (1 575 МВт), Слов'янська ТЕС (880 МВт), Курахівська ТЕС (1 460 МВт), Зуївська ТЕС (1 200 МВт), 
+         Краматорська ТЕЦ (150 МВт). Вуглегірська ТЕС забезпечує електричною енергією найбільш промислово розвинені північно-східні регіони України.</p>
+
+          <img src="files/article-pic1.jpg" alt="" width="444" height="280">
+          <p class="article-aside-right">Проектна потужність Вуглегірської ТЕС становить 3600 МВт.</p>
+
+          <p>Електростанція споруджена у дві черги: перша черга, потужністю 1200 МВт, складається з чотирьох енергоблоків по 300 МВт 
+             з однокорпусними пиловугільними котлами паропродуктивністю по 950 т/год і турбоагрегатами потужністю по 300 МВт кожний; у складі 
+            другої черги, потужністю 2400 МВт, працюють три енергоблоки по 800 МВт з однокорпусними газомазутними котлами паропродуктивністю по 2650т/год
+            і турбоагрегатами потужністю по 800 МВт. На кожному турбоагрегаті працює теплофікаційна установка продуктивністю 15Гкал/ч. Установки призначені 
+             для забезпечення тепловою енергією міста-супутника Світлодарськ та промислової площадки.</p>
+
+          <img src="files/article-pic2.jpg" alt="" class="big-pic" width="1146" height="280">
+
+          <p>Теплова схема електростанції передбачає блочний принцип роботи ТЕС без поперечних зв'язків між блоками по основних лініях. У головному корпусі
+           є центральний щит управління станцією, два блочні щити управління на чотири блоки потужністю по 300 МВт і три блочні щити на три блоки потужністю по 800 МВт.</p>
+
+          <blockquote>
+          Система технічного водопостачання — оборотна на базі водосховища, що створене в долині ріки Лугань. Ставок-охолоджувач має площу дзеркала 15 км2 та максимальну глибину 27 м. 
+          </blockquote>
+
+          <p>Всі генератори електростанції з'єднанні за блочною схемою з трансформаторами потужністю 400 і 1000 МВА. Видача потужності в енергосистему 
+            передбачена на напругах 110 і 330 кВ з відкритих розподільчих пристроїв. Зараз енергоблоки 800 МВт через дефіцит газомазутного палива знаходяться 
+          в стані довготривалого резерву з елементами консервації. Консервація поверхонь нагріву котлів провадиться теплим повітрям.</p>
+
+          <p class="article-aside-left">З початку введення в експлуатацію першого енергоблока потужністю 300 МВт пройшло 40 років. За цей період станція 
+          виробила більше 500 млрд кВт/год електроенергії. </p>
+
+          <p>Сьогодні Вуглегірська ТЕС знаходиться в непростому фінансовому стані і шукає не тільки шляхи вирішення сьогоднішніх проблем, а й перспективи роботи 
+            електростанції на майбутні періоди. Керівниками та фахівцями ТЕС розроблена технічна програма, яка передбачає технічне переоснащення, реабілітацію діючого
+             обладнання. Кінцевою метою програми є підвищення ККД енергоблоків на 4-5%, зменшення викидів в атмосферу та продовження ресурсу обладнання на 15-20 років.</p>
+
+        </div>
+      </article>
+      <section class="section catalog">
+        <div class="container">
+          <header class="section-centered-heading">
+            <h2 id="calc">Калькулятори</h2>
+            <h3>Калькулятори для обчислення викидів</h3>
+          </header>
+          <div class="catalog-content">
+            <div class="card-item">
+            <a href="tverdi.html">
+              <img class="card-pic" src="files/home-pic-1.jpg" alt="викид" width="327" height="220">
+              <div class="card-content">
+                <h3>Тверді частинки</h3>
+            </a>
+                <p>Що потрібно для розрахунку:</p>
+                <dl>
+                  <dt>Q<sup>r</sup><sub>i</sub></dt>
+
+                  <dt>B<sub>i</sub></dt>
+                 
+                  <dt>a<sub>вин</sub></dt>
+
+                  <dt>A<sup>r</sup></dt>
+
+                  <dt>n<sub>зу</sub></dt>
+
+                  <dt>Г<sub>вин</sub></dt>
+
+                  <dt>k<sub>твS</sub></dt>
+                  
+                </dl>
+              </div>
+            </div>
+            <div class="card-item">
+            <a href="so2.html">
+              <img class="card-pic" src="files/home-pic-2.jpg" alt="викид" width="327" height="220">
+              <div class="card-content">
+                <h3>Діоксид сірки SO<sub>2</sub></h3>
+            </a>
+                <p>Що потрібно для розрахунку:</p>
+                <dl>
+                  <dt>Q<sup>r</sup><sub>i</sub></dt>
+
+                  <dt>B<sub>i</sub></dt>
+                  
+                  <dt>S<sup>r</sup></dt>
+
+                  <dt>n<sub>I</sub></dt>
+                 
+                  <dt>n<sub>II</sub></dt>
+
+                  <dt style="font-style: italic;">B</dt>
+                  
+                </dl>
+              </div>
+            </div>
+            <div class="card-item">
+            <a href="nox.html">
+              <img class="card-pic" src="files/home-pic-3.jpg" alt="викид" width="327" height="220">
+           <div class="card-content">
+                <h3>Оксиди азоту NO<sub>x</sub></h3>
+            </a>
+                <p>Що потрібно для розрахунку:</p>
+                <dl>
+                  <dt>Q<sup>r</sup><sub>i</sub></dt>
+                  
+                  <dt>B<sub>i</sub></dt>
+                 
+                  <dt>n<sub>I</sub></dt>
+
+                  <dt>n<sub>II</sub></dt>
+
+                  <dt style="font-style: italic;">B</dt>
+
+                  <dt style="font-style: italic; ">f<sub>н</sub></dt>
+
+                  <dt>k<sub>NOx</sub></dt>
+                  
+                </dl>
+              </div>
+            </div>
+            <div class="card-item">
+            <a href="vazhkimetaly.html">
+              <img class="card-pic" src="files/home-pic-4.jpg" alt="викид" width="327" height="220">
+               <div class="card-content">
+                <h3>Важкі метали</h3>
+            </a>
+                <p>Що потрібно для розрахунку:</p>
+                <dl>
+                  <dt>c<sub>вм</sub></dt>
+                  
+                  <dt>Q<sup>r</sup><sub>i</sub></dt>
+                 
+                  <dt>B<sub>i</sub></dt>
+
+                  <dt>a<sub>вин</sub></dt>
+
+                  <dt style="font-style: italic; ">f<sub>зб</sub></dt>
+
+                  <dt style="font-style: italic; ">f<sub>г</sub></dt>
+
+                  <dt>n<sub>зу</sub></dt>
+
+                  <dt>n<sub>гзу</sub></dt>
+                  
+                </dl>
+              </div>
+            </div>
+
+            <div class="card-item">
+              <a href="zagalniy.html">
+              <img class="card-pic" src="files/home-pic-5.jpg" alt="викид" width="327" height="220">
+               <div class="card-content">
+                <h3>Оксид вуглецю CO</h3>
+              </a>
+            <p style="font-weight: bold;" >*Обчислюється за загальною формулою</p>
+            <p>(потрібно мати значення емісії з таблиці)</p>
+                <dl>
+                  <dt style="font-weight: bold;">E=10^(-6)*k<sub>ji</sub>*B<sub>i</sub>*Q<sub>i</sub><sup>r</sup></dt>
+                </dl>
+              </div>
+            </div>
+
+            <div class="card-item">
+            <a href="co2.html">
+              <img class="card-pic" src="files/home-pic-6.jpg" alt="викид" width="327" height="220">
+               <div class="card-content">
+                <h3>Діоксид вуглецю CO<sub>2</sub></h3>
+            </a>
+                <p>Що потрібно для розрахунку:</p>
+                <dl>
+                  <dt>k<sub>co2</sub></dt>
+                  
+                  <dt>C<sup>r</sup></dt>
+                 
+                  <dt>Q<sup>r</sup><sub>i</sub></dt>
+
+                  <dt>e<sub>c</sub></dt>
+
+                  <dt>B<sub>i</sub></dt>
+                  
+                </dl>
+              </div>
+            </div>
+
+            <div class="card-item">
+              <a href="zagalniy.html">
+              <img class="card-pic" src="files/home-pic-7.jpg" alt="викид" width="327" height="220">
+               <div class="card-content">
+                <h3>Оксид діазоту N<sub>2</sub>O</h3>
+                </a>
+              <p style="font-weight: bold;">*Обчислюється за загальною формулою</p>
+              <p>(потрібно мати значення емісії з таблиці)</p>
+                <dl>
+                  <dt style="font-weight: bold;">E=10^(-6)*k<sub>ji</sub>*B<sub>i</sub>*Q<sub>i</sub><sup>r</sup></dt>
+                </dl>
+              </div>
+            </div>
+
+            <div class="card-item">
+              <a href="zagalniy.html">
+                <img class="card-pic" src="files/home-pic-8.jpg" alt="викид" width="327" height="220">
+               <div class="card-content">
+               <h3>Метан CH<sub>4</sub></h3>
+              </a>
+              <p style="font-weight: bold;">*Обчислюється за загальною формулою</p>
+              <p>(потрібно мати значення емісії з таблиці)</p>
+                <dl>
+                  <dt style="font-weight: bold;">E=10^(-6)*k<sub>ji</sub>*B<sub>i</sub>*Q<sub>i</sub><sup>r</sup></dt>
+                </dl>
+              </div>
+            </div>
+        </div>
+<!--  ГОРИЗОНТАЛЬНЫЙ ITEM 
+  ----------------------------
+  ----------------------------
+            <div class="card-item card-horizontal">
+              <img class="card-pic" src="files/home-pic-5.jpg" alt="викид" width="327" height="178">
+             <div class="card-content">
+                <h3>Заголовок</h3>
+                <p>Опис<sup>12345</sup></p>
+                <dl>
+                  <dt>----</dt>
+                  <dd>-</dd>
+                  <dt>---</dt>
+                  <dd>-</dd>
+                  <dt>---</dt>
+                  <dd>-</dd>
+                </dl>
+              </div>
+            </div>
+            ---------------------------
+            ---------------------------
+-->
+      
+          <p>*Деякі пояснення:</p>
+          <p>k - показник емісії, г/ГДж.</p>
+          <p>Q<sup>r</sup><sub>i</sub> - нижча робоча теплота згоряння палива, МДж/кг.</p>
+          <p>B<sub>i</sub> - витрати палива за проміжок часу.</p>
+          <p>A<sup>r</sup> - масовий вміст золи в паливі на робочу масу, %.</p>
+          <p>a<sub>вин</sub> - частка золи, яка виходить з котла у вигляді леткої золи.</p>
+          <p>n<sub>зу</sub> - ефективність золоуловлюваної установки.</p>
+          <p>Г<sub>вин</sub> - масовий вміст горючих речовин у викидах твердих частинок, %.</p>
+          <p>k<sub>твS</sub> - показник емісії твердих продуктів взаємодії сорбенту та оксидів сірки і твердих
+частинок сорбенту, г/ГДж.</p>
+          <p style="font-style: italic;">B - коефіцієнт роботи очисної установки</p>
+          <p>n<sub>I</sub> - ефективність первинних заходів</p>
+          <p>n<sub>II</sub> - ефективність вторинних заходів</p>
+          <p>S<sup>r</sup> - вміст сірки в паливі на робочу масу за проміжок часу.</p>
+          <p style="font-style: italic; ">f<sub>н</sub> - ступінь зменшення викиду NOx під час роботи на низькому навантаженні.</p>
+          <p>c<sub>вм</sub> - масовий вміст важкого металу у паливі, мг/кг.</p>
+          <p style="font-style: italic; ">f<sub>зб</sub> - коефіцієнт збагачення важкого металу.</p>
+          <p>n<sub>гзу</sub> - ефективність уловлення газоподібної фракції важкого металу в золоуловлювальній установці.</p>
+          <p style="font-style: italic; ">f<sub>г</sub> - частка важкого металу, яка виходить у газоподібній формі.</p>
+          <p> C<sup>r</sup> - масовий вміст вуглецю в паливі на робочу масу, %.</p>
+          <p>e<sub>c</sub> - ступінь окислення вуглецю палива.</p>
+
+
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var scrollbar = document.body.clientWidth - window.innerWidth + 'px';
+      console.log(scrollbar);
+      document.querySelector('[href="#openModal"]').addEventListener('click', function () {
+        document.body.style.overflow = 'hidden';
+        document.querySelector('#openModal').style.marginLeft = scrollbar;
+      });
+      document.querySelector('[href="#close"]').addEventListener('click', function () {
+        document.body.style.overflow = 'visible';
+        document.querySelector('#openModal').style.marginLeft = '0px';
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

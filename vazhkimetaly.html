@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/files/css2.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <h3>
+      Ви знаходитесь на сторінці для обчислення викидів Важких металів
+    </h3>
+    <br>
+
+    <img src="files/metaly.png" width="350px" height="60px" alt="">
+
+     <p>Введіть B<sub>i</sub> - витрати палива за проміжок часу = <input id="B" placeholder="Введіть бажане число" /> </p>
+    
+     <p>Введіть Q<sup>r</sup><sub>i</sub> - нижча робоча теплота згоряння палива, МДж/кг = <input id="Q" placeholder="Введіть бажане число" /> </p>
+
+     <p>Введіть c<sub>вм</sub> - масовий вміст важкого металу у паливі, мг/кг = <input id="cvm" placeholder="Введіть бажане число" /> </p>
+
+     <p>Введіть a<sub>вин</sub> - частка золи, яка виходить з котла у вигляді леткої золи = <input id="avin" placeholder="Введіть бажане число" /> </p>
+
+     <p style="font-style: italic; ">Введіть f<sub>зб</sub> - коефіцієнт збагачення важкого металу = <input id="fzb" placeholder="Введіть бажане число" /> </p>
+
+     <p>Введіть n<sub>зу</sub> - ефективність золоуловлюваної установки (Не більше одиниці!) = <input id="nzu" placeholder="Введіть бажане число" /> </p>
+
+     <p style="font-style: italic; ">Введіть f<sub>г</sub> - частка важкого металу, яка виходить у газоподібній формі (Не більше одиниці!) = <input id="fg" placeholder="Введіть бажане число" /> </p>
+
+     <p>Введіть n<sub>гзу</sub> - ефективність уловлення газоподібної фракції важкого металу в золоуловлювальній установці (Не більше одиниці!) = <input id="ngzu" placeholder="Введіть бажане число" /> </p>
+
+
+
+
+     
+
+    
+
+     <button onclick="func()">Обчислити</button>
+     <p>Валовий викид:</p>
+
+      <p id="result" title="Result"></p>
+
+
+ <script>
+    function func(){
+
+         
+          var B = Number(document.getElementById("B").value);
+          var Q = Number(document.getElementById("Q").value);
+          var cvm = Number(document.getElementById("cvm").value);
+          var avin = Number(document.getElementById("avin").value);
+          var fzb = Number(document.getElementById("fzb").value);
+          var nzu = Number(document.getElementById("nzu").value);
+          var fg = Number(document.getElementById("fg").value);
+          var ngzu = Number(document.getElementById("ngzu").value);
+
+
+          var result = (1/1000000) * (  (cvm / Q) * ((avin * fzb) * (1 - nzu) * (1 - fg) + fg * (1 - ngzu) ) ) * Q * B;
+
+          document.getElementById("result").innerHTML = result;
+          }
+
+ </script>
+  <br>
+  <p>Навігація по сайту:</p>
+  <ul>
+  <li> <a href="index.html">Повернутися на головну сторінку</a></li>
+  <li> <a href="so2.html">Розрахувати викид SO2 ( діоксид сірки )</a></li>
+
+  <li> <a href="tverdi.html">Розрахувати викид твердих частинок</a></li>
+   
+  <li><a href="co2.html">Розрахувати викид CO2 ( діооксид вуглецю )</a></li>
+    
+  <li><a href="nox.html">Розрахувати викид NOx ( оксиди азоту )</a></li>
+
+  <li><a href="zagalniy.html">Розрахувати викид CO ( оксид вуглецю )</a></li>
+
+  <li><a href="zagalniy.html">Розрахувати викид N2O ( оксид діазоту )</a></li>
+
+  <li><a href="zagalniy.html">Розрахувати викид CH4 ( метан )</a></li>
+    
+  
+</ul>
+
+  </body>
+
+</html>
